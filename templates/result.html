@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthenium - Resultado de la Conversión</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Synthenium</h1>
+    <p>Convierte tu texto en voz, audio en texto o video en voz de manera rápida y sencilla</p>
+  </header>
+  <main>
+    {% if audio_file %}
+      <h2>Audio Generado</h2>
+      <div class="result-container">
+        <audio controls>
+          <source src="{{ url_for('audio', filename=audio_file) }}" type="audio/wav">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    {% elif recognized_text %}
+      <h2>Texto Reconocido</h2>
+      <div class="result-container">
+        <p>{{ recognized_text }}</p>
+      </div>
+    {% endif %}
+    <div class="result-container">
+      <a href="{{ url_for('index') }}" class="back-button">Volver</a>
+    </div>
+  </main>
+</body>
+</html>

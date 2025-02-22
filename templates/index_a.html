@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthenium - Conversor de Texto a Voz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+    main {
+      margin: 40px auto;
+      max-width: 600px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input[type="file"] {
+      margin: 20px 0;
+      padding: 10px;
+      border: 2px solid #4CAF50; /* Borde verde */
+      border-radius: 4px;
+      background-color: #f9fff9;
+    }
+    input[type="submit"] {
+      background-color: #ddd; /* Botón grisado inicialmente */
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: not-allowed;
+      transition: background-color 0.3s;
+    }
+    input[type="submit"].enabled {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    input[type="submit"].enabled:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Synthenium</h1>
+    <p>Convierte tu texto en voz de manera rápida y sencilla</p>
+  </header>
+  <main>
+    <h2>Sube tu archivo TXT</h2>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".txt" id="fileInput" required>
+      <br>
+      <input type="submit" value="Convertir a audio" id="submitButton" disabled>
+    </form>
+  </main>
+  <script>
+    // Habilita el botón de envío cuando se seleccione un archivo
+    const fileInput = document.getElementById('fileInput');
+    const submitButton = document.getElementById('submitButton');
+    
+    fileInput.addEventListener('change', function() {
+      if (fileInput.files.length > 0) {
+        submitButton.disabled = false;
+        submitButton.classList.add('enabled');
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.remove('enabled');
+      }
+    });
+  </script>
+</body>
+</html>

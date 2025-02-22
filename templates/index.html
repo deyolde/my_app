@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthenium - Conversor de Texto a Voz, Voz a Texto y Video a Voz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Synthenium</h1>
+    <p>Convierte tu texto en voz, audio en texto o video en voz de manera rápida y sencilla</p>
+  </header>
+  <main>
+    <h2>Selecciona el tipo de conversión</h2>
+    <!-- Solapas para seleccionar el tipo de conversión -->
+    <div class="tabs">
+      <button class="tab-button active" data-conversion="text_to_audio">Texto a Audio</button>
+      <button class="tab-button" data-conversion="audio_to_text">Audio a Texto</button>
+      <button class="tab-button" data-conversion="video_to_audio">Video a Voz</button>
+    </div>
+    <!-- Formulario único que se adapta según la solapa activa -->
+    <form method="post" enctype="multipart/form-data" class="conversion-form">
+      <!-- Campo oculto para enviar el tipo de conversión seleccionado -->
+      <input type="hidden" name="conversion_type" id="conversionTypeInput" value="text_to_audio">
+      <h3 id="fileLabel">Sube tu archivo TXT</h3>
+      <input type="file" name="file" id="fileInput" accept=".txt" required>
+      <input type="submit" value="Convertir" id="submitButton" disabled>
+    </form>
+  </main>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

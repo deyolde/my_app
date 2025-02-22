@@ -1,0 +1,217 @@
+/* Estilo general y tipografía */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff0; /* Fondo verde muy claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #2e7d32; /* Verde oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+  }
+  
+  /* Contenedor principal */
+  main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Títulos */
+  h2, h3 {
+    color: #2e7d32;
+  }
+  
+  /* Estilos para las solapas */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: #a5d6a7; /* Verde claro */
+    color: #1b5e20; /* Verde muy oscuro */
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .tab-button.active {
+    background: #66bb6a; /* Verde más vibrante */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Formulario de conversión */
+  .conversion-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .conversion-form input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .conversion-form input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .conversion-form input[type="submit"].enabled:hover {
+    background-color: #1b5e20;
+  }
+  
+  .conversion-form input[type="submit"].enabled:hover {
+    background-color: #1b5e20;
+  }
+
+  /* Estilos generales (ya existentes) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff0; /* Fondo verde muy claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #2e7d32; /* Verde oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  h2, h3 {
+    color: #2e7d32;
+  }
+  
+  /* Estilos para las solapas y formulario (index.html) */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: #a5d6a7;
+    color: #1b5e20;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .tab-button.active {
+    background: #66bb6a;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .conversion-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .conversion-form input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .conversion-form input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .conversion-form input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .conversion-form input[type="submit"].enabled:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* Estilos para result.html */
+  .result-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #1b5e20;
+  }
+  
+  
