@@ -1,3 +1,4 @@
+audioop-lts==0.2.1
 blinker==1.9.0
 click==8.1.8
 colorama==0.4.6
@@ -9,9 +10,7 @@ Jinja2==3.1.5
 MarkupSafe==3.0.2
 packaging==24.2
 pydub==0.25.1
-pypiwin32==223
 pyttsx3==2.98
-pywin32==308
 SpeechRecognition==3.14.1
 standard-aifc==3.13.0
 standard-chunk==3.13.0
